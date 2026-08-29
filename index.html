@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Baúl de las Carteras de Kateryn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #6F4E37;
+            background-color: #F5EFE6;
+        }
+        header {
+            background-color: #C4A484;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: #6F4E37;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .hero {
+            background-color: #DCCDBB;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .services, .about, .contact {
+            padding: 30px 20px;
+        }
+        .services h2, .about h2, .contact h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .services p, .about p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #C4A484;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #9A7154;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #9A7154;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #6F4E37;
+        }
+        @media (min-width: 600px) {
+            .hero {
+                padding: 100px 20px;
+            }
+            .services, .about, .contact {
+                max-width: 800px;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>El Baúl de las Carteras de Kateryn</h1>
+    </div>
+    <nav>
+        <a href="#services">Servicios</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero" id="hero">
+    <h1>Bienvenidos al mundo de la elegancia</h1>
+    <p>Explora carteras únicas que reflejan tu estilo personal.</p>
+</section>
+
+<section class="services" id="services">
+    <h2>Servicios/Productoss</h2>
+    <p>Ofrecemos una variedad de carteras hechas a mano, cada una diseñada con atención al detalle y calidad excepcional.</p>
+</section>
+
+<section class="about" id="about">
+    <h2>Sobre mí/Nosotros</h2>
+    <p>Soy Kateryn, apasionada por la moda y el diseño, y creo carteras que no solo son funcionales, sino que también son una declaración de estilo.</p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Nombre" required>
+        <input type="email" id="email" placeholder="Correo Electrónico" required>
+        <textarea id="message" placeholder="Mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2023 El Baúl de las Carteras de Kateryn. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío real del formulario
+        alert('Gracias por su mensaje, nos pondremos en contacto pronto!');
+        this.reset(); // Reinicia el formulario
+    });
+</script>
+
+</body>
+</html>
